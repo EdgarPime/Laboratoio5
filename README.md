@@ -36,7 +36,22 @@ $ docker push pime/lab5virtualizacion
 Y hacemos lo mismo para subir la base de datos pero se hace el push en el otro repositorio.
 
 ![image](https://user-images.githubusercontent.com/37817818/59577856-a3d05b00-9082-11e9-8939-2ce7606fbf76.png)
-  
+ 
+Luego de ello creamos el archivo docker-compose y agregamos el siguiente codigo para obtener las imagenes de los contenedores creados.
+
+![image](https://user-images.githubusercontent.com/37817818/59580016-bc457300-908c-11e9-96dd-157604960109.png)
+
+Despues de descargar las imagenes ejecutamos el archivo con el comand:
+$ docker-compose up
+Para ejecutar la aplicacion
+
+![image](https://user-images.githubusercontent.com/37817818/59580052-e7c85d80-908c-11e9-82d9-b0e1557acfbf.png)
+
+Podemos observar que se crearon las imagenes y los contenedores.
+
+![image](https://user-images.githubusercontent.com/37817818/59580111-0dedfd80-908d-11e9-9961-648e05f49097.png)
+
+ 
 Lo siguiente sera agregar la aplicacion a ECS
 
 ![image](https://user-images.githubusercontent.com/37817818/59577864-af238680-9082-11e9-99cc-d51ea92eaa34.png)
