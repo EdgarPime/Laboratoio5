@@ -1,0 +1,41 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'crud_db'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'Edgarpime01'
+      MYSQL_ROOT_PASSWORD: 'Edgarpime01'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.5.10
+    volumes:
+      - crud:/var/lib/mysql
+    
+  nodejs:
+   image: pime/lab5.1virtualizacion
+   ports:
+      - '4000:3306'
+      - '8000:8000'
+   expose:
+      - '8000'
+   depends_on:
+     - db
+   networks:
+      vpcbr:
+        ipv4_address: 10.5.6.11
+# Names our volume
+volumes:
+  crud:
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.5.0.0/16
