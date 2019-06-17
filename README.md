@@ -1,6 +1,11 @@
 # Laboratoio5
 Dockerizar aplicación del Laboratorio 4, incluyendo el servicio web (aplicación) y base de datos.
 
+Para ingresar a la aplicacion de ECS
+
+http://3.15.0.154:8000/
+
+
 1. Instrucciones para construir imagen.
 
 Creamos un docker file dentro de la caperte de la aplicacion
